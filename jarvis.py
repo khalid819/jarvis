@@ -8,10 +8,9 @@ import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-y="C:\\Users\Hasan\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
 recognizer=sr.Recognizer()
 engine = pyttsx3.init()
-newsapi="edae796f6a954f1f9100cb5e2d334c6f"
+newsapi="your news api key"
 def speak(text):
     engine.say(text)
     engine.runAndWait()
@@ -28,10 +27,7 @@ wish()
 op=input("optins[writing/speaking]: ")
 if op=="speaking":
     def processcommand(c):
-        if "vs code"in c.lower():
-            speak("vs code opening")
-            os.startfile(y)
-        elif "open" in c.lower():
+        if "open" in c.lower():
             d=c.lower().split(" ")[1]
             speak(f"opening {d}")
             webbrowser.open(f"https:\\{d}.com")
@@ -86,8 +82,8 @@ if op=="speaking":
                 except Exception as e:
                  print(f"Failed to send email: {e}")
                  if __name__=="__main__":
-                     sender_email = "earth8084@gmail.com"
-                     sender_password = "mvtr kgjy kdcp zsbv"  
+                     sender_email ="your email address"
+                     sender_password = "your password"  
                      recipient_email = a
                      subject =b
                      body = o
@@ -121,7 +117,7 @@ if op=="speaking":
                         print(f"HTTP error occurred: {http_err}")
                     except Exception as err:
                         print(f"An error occurred: {err}")
-                api_key = "0040233313863f3ac6c7c383f46c5837"
+                api_key = "your open wether api key"
                 city = input("Enter the city name: ")
                 get_weather(city, api_key)
         while True:
@@ -147,10 +143,7 @@ if op=="speaking":
 elif op=="writing":
     while True:
             def processcommand(c):
-             if "vs code"in c:
-                speak("vs code opening")
-                os.startfile(y)
-             elif "open" in c:
+             if "open" in c:
                 d=c.split(" ")[1]
                 speak(f"opening {d}")
                 webbrowser.open(f"https:\\{d}.com")
@@ -190,8 +183,8 @@ elif op=="writing":
                  except Exception as e:
                      print(f"Failed to send email: {e}")
                  if __name__ == "__main__":
-                    sender_email = "earth8084@gmail.com"
-                    sender_password = "mvtr kgjy kdcp zsbv"  # Use an app password if using Gmail
+                    sender_email = "your email address"
+                    sender_password = "your password"  # Use an app password if using Gmail
                     recipient_email = a
                     subject = b
                     body = o
@@ -225,7 +218,7 @@ elif op=="writing":
                         print(f"HTTP error occurred: {http_err}")
                     except Exception as err:
                         print(f"An error occurred: {err}")
-                api_key = "0040233313863f3ac6c7c383f46c5837"
+                api_key = "your openwether api key"
                 city = input("Enter the city name: ")
                 get_weather(city, api_key)
              elif "what is" or "who is" in c:
